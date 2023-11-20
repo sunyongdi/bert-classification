@@ -1,5 +1,6 @@
 # bert 文本分类
 
+```
 precision    recall  f1-score   support
 
 故意伤害罪       1.00      0.98      0.99       397
@@ -8,6 +9,7 @@ precision    recall  f1-score   support
     诈骗罪       0.98      0.98      0.98       431
 交通肇事罪       0.99      0.93      0.96       407
 
- accuracy                           0.97      1991
-macro avg       0.97      0.97      0.97      1991
+accuracy                           0.97      1991
+    macro avg       0.97      0.97      0.97      1991
 weighted avg       0.97      0.97      0.97      1991
+```
