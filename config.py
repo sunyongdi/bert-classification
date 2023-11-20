@@ -65,10 +65,8 @@ class Args:
         parser.add_argument(
             "--do_train", default=True, action="store_true", help="是否训练"
         )
-        
-        parser.add_argument(
-            "--do_test", default=True, action="store_true", help="是否测试"
-        )
+
+        parser.add_argument("--do_test", default=True, action="store_true", help="是否测试")
 
         parser.add_argument("--gradient_accumulation_steps", default=1, type=int)
 
