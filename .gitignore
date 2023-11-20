@@ -1,0 +1,17 @@
+*.pyc
+
+__MACOSX/
+__pycache__/
+checkpoints/
+model_hub/
+
+*.txt
+*.tsv
+*.pdf
+*.zip
+*.log
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+
