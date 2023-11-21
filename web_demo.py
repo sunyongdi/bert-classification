@@ -15,13 +15,12 @@ def get_model():
     # st.success("Loaded NLP model from Hugging Face!")
     return model
 
-MAX_TURNS = 20
-MAX_BOXES = MAX_TURNS * 2
+
+
 
 def predict(input):
     model = get_model()
     res = model.predict(input)
-
     return res
 
 # create a prompt text for the text generation
