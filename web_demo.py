@@ -3,6 +3,10 @@ import streamlit as st
 import config
 from infer import InferClassify
 
+st.set_page_config(
+    page_title="文本分类"
+    # page_icon=":robot:"
+)
 
 @st.cache_resource
 def get_model():
@@ -11,6 +15,8 @@ def get_model():
     # st.success("Loaded NLP model from Hugging Face!")
     return model
 
+MAX_TURNS = 20
+MAX_BOXES = MAX_TURNS * 2
 
 def predict(input):
     model = get_model()
@@ -18,9 +24,14 @@ def predict(input):
 
     return res
 
+# create a prompt text for the text generation
+max_length = st.sidebar.slider(
+    'max_length', 0, 512, 128, step=1
+)
+
 
 # create a prompt text for the text generation
-prompt_text = st.text_area(label="文本分类", height=100, placeholder="请在这儿输入分类文本")
+prompt_text = st.text_area(label="文本分类", height=100, placeholder="请在这儿输入分类文本", max_chars=max_length)
 
 
 if st.button("确认", key="predict"):
